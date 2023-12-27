@@ -45,8 +45,7 @@ public class MouseMove : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
-        {
-            Debug.Log(hit.point);
+        { 
             return hit.point;
         }
         return Vector3.zero;
