@@ -17,7 +17,7 @@ public class CameraLock : MonoBehaviour
             var x = tar.position.x;
             var y = tar.position.y;
             var z = tar.position.z;
-            transform.position = new Vector3(x + 5, y + 10,z + 5);
+            transform.position = new Vector3(x + 8, y + 10,z + 8);
         }
     }
 }
