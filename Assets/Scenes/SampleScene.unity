@@ -747,12 +747,12 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 60, y: 60}
+  m_CellSize: {x: 80, y: 80}
   m_Spacing: {x: 5, y: 5}
-  m_Constraint: 0
+  m_Constraint: 2
   m_ConstraintCount: 2
 --- !u!114 &178792034
 MonoBehaviour:
@@ -5888,7 +5888,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1422340146995631812, guid: ab8e1981dfc14a84eb00bf8aded1bd7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.099712
+      value: -5.61
       objectReference: {fileID: 0}
     - target: {fileID: 1422340146995631812, guid: ab8e1981dfc14a84eb00bf8aded1bd7b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5896,7 +5896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1422340146995631812, guid: ab8e1981dfc14a84eb00bf8aded1bd7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.652428
+      value: -26.97
       objectReference: {fileID: 0}
     - target: {fileID: 1422340146995631812, guid: ab8e1981dfc14a84eb00bf8aded1bd7b, type: 3}
       propertyPath: m_LocalRotation.w
