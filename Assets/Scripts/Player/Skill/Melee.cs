@@ -32,7 +32,7 @@ public class Melee : MonoBehaviour
         p.y += 0.3f;
         Ray ray = new Ray(p, t.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 2.0f))
+        if (Physics.Raycast(ray, out hit, 4.0f))
         {
             if (Debugger_Hitpoint)
             {

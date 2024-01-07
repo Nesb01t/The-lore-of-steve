@@ -21,8 +21,6 @@ public class HealthBarLookAt : MonoBehaviour
     void Update()
     {
         transform.LookAt(tar);
-        _healthText.text = _mobHealth.Health.ToString() + " / " + _mobHealth.GetMaxHealth().ToString();
-        transform.localScale = new Vector3(transform.localScale.x,
-            _startScale * _mobHealth.Health / _mobHealth.GetMaxHealth(), transform.localScale.z);
+        _healthText.text = _mobHealth.Health + " / " + _mobHealth.GetMaxHealth();
     }
 }

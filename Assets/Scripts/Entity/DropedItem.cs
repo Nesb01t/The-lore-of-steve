@@ -12,6 +12,8 @@ public class DropedItem : MonoBehaviour
     private Vector3 _startPos;
     private GameObject _nearestPlayer;
 
+    public GameObject droppedInventoryItem;
+
     void Start()
     {
         InitRotationAnime();
@@ -29,6 +31,13 @@ public class DropedItem : MonoBehaviour
         _startPos = transform.position;
     }
 
+    void PickupItem()
+    {
+        GameObject.Find("Interface_Inventory").GetComponent<InventoryController>()
+            .AddInventoryItem(droppedInventoryItem);
+        Destroy(gameObject);
+    }
+
     Transform UpdatePickScan(Transform t)
     {
         Vector3 playerPos = _nearestPlayer.transform.position;
@@ -38,7 +47,7 @@ public class DropedItem : MonoBehaviour
         if (dis < 1.5f)
         {
             // pickup items
-            Destroy(gameObject);
+            PickupItem();
         }
 
         if (dis < 5.0f)
