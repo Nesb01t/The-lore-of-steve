@@ -8,12 +8,15 @@ public class Melee : MonoBehaviour
     public float Damage = 3.0f;
     public GameObject Debugger_Hitpoint;
 
+    public EventHandler handler;
+
     private Animator animator;
 
     void Start()
     {
         // init
         animator = GetComponent<Animator>();
+        handler = gameObject.AddComponent<EventHandler>();
     }
 
     void Update()
@@ -34,6 +37,7 @@ public class Melee : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 4.0f))
         {
+            handler.HandleEvent(new MicroEvent("你好"));
             if (Debugger_Hitpoint)
             {
                 Instantiate(Debugger_Hitpoint, hit.point, Quaternion.identity);

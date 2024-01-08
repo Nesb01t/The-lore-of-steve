@@ -4002,6 +4002,7 @@ GameObject:
   - component: {fileID: 1106117149}
   - component: {fileID: 1106117148}
   - component: {fileID: 1106117147}
+  - component: {fileID: 1106117150}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4059,6 +4060,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1106117150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106117146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0411341755c8cd469e71fb52c4e39e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146759612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,7 +5693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ca49eec77e7e642b78b530c68ccb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultItem: {fileID: 1321409611690692695, guid: 643d92f646d5d1f46b40346b1c17628e, type: 3}
+  defaultItem: {fileID: 1601361022769888960, guid: bd7e01e0194ce6e49b3f7b4144fe4091, type: 3}
 --- !u!1001 &1883439908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6869,6 +6882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bow
       objectReference: {fileID: 0}
+    - target: {fileID: 1321409611690692695, guid: 643d92f646d5d1f46b40346b1c17628e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1641448376596557999, guid: 643d92f646d5d1f46b40346b1c17628e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7322,6 +7339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 3
   Debugger_Hitpoint: {fileID: 3590863481413551204, guid: dc529ed8379a91b47905d4fb88a9689a, type: 3}
+  handler: {fileID: 0}
 --- !u!4 &5801008073249500338 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5981057316585958521, guid: bd7e01e0194ce6e49b3f7b4144fe4091, type: 3}
@@ -7454,7 +7472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1601361022769888960, guid: bd7e01e0194ce6e49b3f7b4144fe4091, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5981057316585958521, guid: bd7e01e0194ce6e49b3f7b4144fe4091, type: 3}
       propertyPath: m_LocalPosition.x
