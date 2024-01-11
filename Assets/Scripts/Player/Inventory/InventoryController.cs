@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using OpenCover.Framework.Model;
 using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using Utils;
+using File = System.IO.File;
 
 public class InventoryController : MonoBehaviour
 {
@@ -17,8 +21,21 @@ public class InventoryController : MonoBehaviour
     {
         InitItemGridSlots();
         SetInventoryItem(defaultItem, 0);
+        SaveInventory();
     }
 
+    public void SaveInventory()
+    {
+        string filePath = Application.dataPath + @"/Resources/Inventory.json";
+        FileInfo file = new FileInfo(filePath);
+
+        StreamWriter sw = file.CreateText();
+        string json = JsonUtility.ToJson(_items);
+        sw.WriteLine(json);
+        sw.Close();
+        sw.Dispose();
+    }
+    
     public void AddInventoryItem(GameObject prefab)
     {
         for (int i = 0; i < 24; i++)

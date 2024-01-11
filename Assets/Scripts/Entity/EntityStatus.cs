@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TsCenter;
 using UnityEngine;
 
 public class MobHealth : MonoBehaviour
@@ -9,8 +10,9 @@ public class MobHealth : MonoBehaviour
     private float _maxHealth;
 
     void Start()
-    {
+    { 
         _maxHealth = Health;
+        EnvSingleton.Use("getHealth");
     }
 
     void Update()
